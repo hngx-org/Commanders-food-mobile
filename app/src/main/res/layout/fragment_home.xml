@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:src="@drawable/splash_login"
+           android:id="@+id/profilePic"
+           android:layout_marginTop="30dp"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profilePic"
+            android:text="Hi"
+            android:layout_marginTop="30dp"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/txtHi"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtHi"
+            android:text="--"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="1dp"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/txtName"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtName"
+            android:text="!"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="1dp"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/txtExclamationMark"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Staff ID:"
+            android:layout_below="@id/txtHi"
+            android:layout_toRightOf="@id/profilePic"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtStaffId"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:layout_below="@id/txtHi"
+            android:layout_toRightOf="@id/txtStaffId"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/txtId"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="370dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/txtId"
+            android:layout_marginTop="20dp"
+            android:elevation="5dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/lunch_cardView"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_tick"
+                    android:id="@+id/imgGreenTick"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available Lunch Credit"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/imgGreenTick"
+                    android:textColor="@color/black"
+                    android:id="@+id/txtLunchCredit"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textSize="20sp"
+                    android:layout_below="@id/txtLunchCredit"
+                    android:layout_toRightOf="@id/imgGreenTick"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:id="@+id/txtLunchCreditNumber"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plates"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@id/txtLunchCredit"
+                    android:layout_toRightOf="@id/txtLunchCreditNumber"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:id="@+id/txtPlates"/>
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_lunch_btns"
+            android:layout_below="@+id/lunch_cardView"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_image_bg"
+                android:text="Redeem Lunch"
+                android:id="@+id/btn_redeem_lunch" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_image_bg"
+                android:text="Send Lunch"
+                android:id="@+id/btn_send_lunch"
+                android:layout_gravity="start"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtRecentHistory"
+            android:layout_below="@id/layout_lunch_btns"
+            android:text="Lunch History"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNoHistory"
+            android:layout_below="@id/txtRecentHistory"
+            android:text="Nothing yet, check back later!"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:textSize="17sp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ReedemLunchFragment"
+    android:orientation="vertical"
+    android:paddingLeft="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Redeem Lunch"
+        android:id="@+id/txt_redeem_lunch_bottom_fragment"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the number of lunch to redeem"
+        android:id="@+id/txt_enter_lunch"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:background="@drawable/edit_text_login_bg" />
+
+    <Button
+        android:layout_width="240dp"
+        android:layout_height="75dp"
+        android:text="Redeem Lunch"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp" />
+
+
+</LinearLayout>

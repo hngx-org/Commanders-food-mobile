@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".SearchFragment">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Give a free lunch!"
+        android:textSize="40sp"
+        android:id="@+id/txt_giveLunch"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="320dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_search"
+        app:boxBackgroundColor="#e5e5e5"
+        app:boxStrokeWidth="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search employee" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_filter"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+</LinearLayout>
