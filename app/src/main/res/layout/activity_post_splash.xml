@@ -22,9 +22,28 @@
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="30dp"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/create_account"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="Create Account"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:backgroundTint="@color/white"
+        android:textColor="#7C149B"
+        android:layout_marginTop="40dp"/>
 
-
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_up"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="Sign In"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:backgroundTint="@color/white"
+        android:textColor="#7C149B"
+        android:layout_marginTop="40dp"/>
 
 </LinearLayout>

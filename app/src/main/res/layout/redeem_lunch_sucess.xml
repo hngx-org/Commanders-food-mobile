@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/background"
+        android:id="@+id/img_lunchredeemed"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lunch Redeemed!"
+        android:textColor="#710193"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_lunchredeemed"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txt_redeem_message"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_lunchredeemed"
+            android:text="You have successfully redeemed"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/txt_numberoflunchredeemed"
+            android:textSize="17sp"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="free lunches."
+            android:textSize="17sp"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Go to home page"
+        android:textColor="#7C149B"
+        app:backgroundTint="@color/white"
+        app:strokeWidth="1dp"
+        android:id="@+id/btn_successful"
+        android:textSize="17sp"
+        android:layout_below="@id/txt_redeem_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:strokeColor="#7C149B"
+        app:cornerRadius="10dp"/>
+
+</RelativeLayout>

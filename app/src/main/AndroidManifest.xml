@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +14,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreeLunch"
         tools:targetApi="31">
+        <activity
+            android:name=".FetchProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EnterMailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RedeemLunchSuccessful"
+            android:exported="false" />
+        <activity
+            android:name=".ListViewHistory"
+            android:exported="false" />
+        <activity
+            android:name=".otpDialogLayout"
+            android:exported="false" />
+        <activity
+            android:name=".OTP"
+            android:exported="false" />
+        <activity
+            android:name=".CreateStaffAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostSplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrganizationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateOrganizationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseAccoutActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />

@@ -27,21 +27,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/profilePic"
-            android:text="Hi"
+            android:text="Hi,"
             android:layout_marginTop="30dp"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            android:textColor="#710193"
             android:textStyle="bold"
             android:id="@+id/txtHi"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/txtHi"
-            android:text="--"
+            android:text="user"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="1dp"
+            android:layout_marginLeft="5dp"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            android:textColor="#710193"
             android:textStyle="bold"
             android:id="@+id/txtName"/>
         <TextView
@@ -52,25 +52,17 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="1dp"
             android:textSize="30sp"
-            android:textColor="@color/black"
+            android:textColor="#710193"
             android:textStyle="bold"
             android:id="@+id/txtExclamationMark"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Staff ID:"
+            android:text="Position"
+            android:textColor="#AD99B2"
             android:layout_below="@id/txtHi"
             android:layout_toRightOf="@id/profilePic"
             android:layout_marginTop="10dp"
-            android:id="@+id/txtStaffId"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="--"
-            android:layout_below="@id/txtHi"
-            android:layout_toRightOf="@id/txtStaffId"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp"
             android:id="@+id/txtId"/>
 
         <androidx.cardview.widget.CardView
@@ -78,58 +70,59 @@
             android:layout_height="100dp"
             android:layout_below="@id/txtId"
             android:layout_marginTop="20dp"
-            android:elevation="5dp"
+            android:elevation="7dp"
             android:layout_centerHorizontal="true"
             app:cardCornerRadius="10dp"
+            android:background="@drawable/fram_43"
             android:id="@+id/lunch_cardView"
             app:cardUseCompatPadding="true">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fram_43"
+                android:scaleType="centerCrop"/>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/ic_tick"
-                    android:id="@+id/imgGreenTick"
-                    android:layout_marginLeft="10dp"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You have"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:id="@+id/youhave"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="cursive"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_toRightOf="@+id/youhave"
+                android:textColor="#FAFF00"
+                android:textStyle="bold"
+                android:id="@+id/txtLunchCount"
+                android:textSize="30sp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="cursive"
+                android:layout_marginLeft="5dp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Available Lunch Credit"
-                    android:layout_marginTop="20dp"
-                    android:textSize="16sp"
-                    android:layout_toRightOf="@id/imgGreenTick"
-                    android:textColor="@color/black"
-                    android:id="@+id/txtLunchCredit"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="--"
-                    android:textSize="20sp"
-                    android:layout_below="@id/txtLunchCredit"
-                    android:layout_toRightOf="@id/imgGreenTick"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="5dp"
+                    android:text="free lunches!"
+                    android:layout_below="@+id/youhave"
+                    android:textColor="#FAFF00"
                     android:textStyle="bold"
-                    android:id="@+id/txtLunchCreditNumber"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Plates"
-                    android:textSize="20sp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_below="@id/txtLunchCredit"
-                    android:layout_toRightOf="@id/txtLunchCreditNumber"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="5dp"
-                    android:textStyle="bold"
-                    android:id="@+id/txtPlates"/>
+                    android:textSize="30sp"
+                    android:fontFamily="cursive"
+                    android:layout_marginLeft="20dp"/>
             </RelativeLayout>
+
 
 
         </androidx.cardview.widget.CardView>
@@ -144,16 +137,18 @@
             android:paddingRight="20dp"
             android:layout_marginTop="15dp">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_image_bg"
+                android:layout_height="60dp"
                 android:text="Redeem Lunch"
-                android:id="@+id/btn_redeem_lunch" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_image_bg"
+                android:id="@+id/btn_redeem_lunch"
+                app:backgroundTint="#7C149B"
+                app:cornerRadius="10dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                app:backgroundTint="#EABA00"
+                app:cornerRadius="10dp"
                 android:text="Send Lunch"
                 android:id="@+id/btn_send_lunch"
                 android:layout_gravity="start"
@@ -174,13 +169,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtNoHistory"
-            android:layout_below="@id/txtRecentHistory"
-            android:text="Nothing yet, check back later!"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="50dp"
-            android:textSize="17sp"
-            android:layout_centerHorizontal="true"/>
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:text="No history yet."
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txtRecentHistory"/>
 
     </RelativeLayout>
 

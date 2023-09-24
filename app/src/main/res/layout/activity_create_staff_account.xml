@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateStaffAccountActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Staff Account"
+            android:textColor="#7C149B"
+            android:textSize="25sp"
+            android:layout_marginBottom="50dp"/>
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_custom"
+            android:hint="First name"
+            android:paddingLeft="20dp"
+            android:id="@+id/staffFname"/>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_custom"
+            android:hint="Last name"
+            android:paddingLeft="20dp"
+            android:id="@+id/staffLname"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_custom"
+            android:hint="Email"
+            android:paddingLeft="20dp"
+            android:id="@+id/staffEmail"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_custom"
+            android:hint="Phone Number"
+            android:inputType="numberSigned"
+            android:paddingLeft="20dp"
+            android:id="@+id/staffPnumber"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_custom"
+            android:hint="Password"
+            android:paddingLeft="20dp"
+            android:id="@+id/staffPassword"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_custom"
+            android:hint="Enter OTP"
+            android:paddingLeft="20dp"
+            android:id="@+id/sentotp"
+            android:layout_marginTop="20dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="270dp"
+            android:layout_height="70dp"
+            app:backgroundTint="#7C149B"
+            android:text="Next"
+            android:id="@+id/btn_next"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            app:cornerRadius="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="#87748C"
+                android:textSize="15sp"
+                android:id="@+id/txt_haveaccount"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in"
+                android:textColor="#FFA500"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/txt_haveaccount"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/txt_sign_in"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

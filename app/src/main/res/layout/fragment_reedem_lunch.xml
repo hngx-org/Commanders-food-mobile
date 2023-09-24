@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ReedemLunchFragment"
     android:orientation="vertical"
     android:paddingLeft="20dp">
@@ -19,23 +20,52 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter the number of lunch to redeem"
-        android:id="@+id/txt_enter_lunch"
+        android:text="Enter Bank Name"
+        android:id="@+id/txt_enterbankname"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:id="@+id/edt_enterbankName"
+        android:background="@drawable/otp_custom" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Account Number"
+        android:id="@+id/txt_enteracctnumber"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:id="@+id/edt_enterAccountNumber"
+        android:background="@drawable/otp_custom" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of lunch to redeem"
+        android:id="@+id/txt_numberoflunchtoredeem"
         android:textSize="18sp"
         android:textColor="@color/black"
         android:layout_marginTop="20dp"/>
     <EditText
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:background="@drawable/edit_text_login_bg" />
+        android:id="@+id/edt_NUmberOfLunchToRedeem"
+        android:background="@drawable/otp_custom" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:layout_width="240dp"
         android:layout_height="75dp"
-        android:text="Redeem Lunch"
+        android:text="Withdraw"
+        android:textSize="17sp"
+        android:id="@+id/btn_withdraw"
         android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#7C149B"
+        app:cornerRadius="10dp"/>
 
 
 </LinearLayout>
