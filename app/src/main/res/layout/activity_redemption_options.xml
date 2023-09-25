@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Send Lunch. Don't Forget To Add Cool Notes!"/>
+    <EditText
+        android:id="@+id/etOption1"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/otp_custom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="20dp"
+        android:hint="User Id"/>
+
+    <EditText
+        android:id="@+id/etOption2"
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:background="@drawable/otp_custom"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:inputType="numberSigned"
+        android:hint="Quantity"/>
+
+    <EditText
+        android:id="@+id/etOption3"
+        android:paddingLeft="20dp"
+        android:background="@drawable/otp_custom"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Leave a note"/>
+
+    <!-- Button to redeem -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRedeem"
+        android:layout_width="280dp"
+        app:backgroundTint="#7C149B"
+        app:cornerRadius="10dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_height="60dp"
+        android:text="Send Away"/>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".RedeemLunchActivity">
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/otp_custom"
+        android:hint="Enter Token to redeem"
+        android:paddingLeft="20dp"
+        android:id="@+id/redeemtoken"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        app:backgroundTint="#EABA00"
+        android:layout_marginTop="15dp"
+        app:cornerRadius="10dp"
+        android:textSize="16sp"
+        android:id="@+id/redeemlunc"
+        android:text="Redeem My Sweet Lunch"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

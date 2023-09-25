@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".EnterUserIdActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+
+            android:text="Your user id is: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="userid"
+            android:id="@+id/txtUserid"
+            android:textColor="#9747FF"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+    <!---
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/otp_custom"
+        android:id="@+id/edt_enterid"
+        android:hint="Confirm your id to continue"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="15dp"/>  -->
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:id="@+id/btn_continuetoprofile"
+        app:cornerRadius="10dp"
+        android:text="Continue"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        app:backgroundTint="#7C149B"/>
+
+</LinearLayout>

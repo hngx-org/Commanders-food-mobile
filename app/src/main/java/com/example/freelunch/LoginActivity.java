@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.example.freelunch.utils.LoginResponse;
 
@@ -24,11 +25,30 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginBtn;
     private EditText username, password;
     public static ApiService apiService;
+    private TextView forgetpassword, createacct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        forgetpassword = findViewById(R.id.txtForgotPassword);
+        createacct = findViewById(R.id.txtCreateAcct);
+
+        forgetpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forgotPassword = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+                startActivity(forgotPassword);
+            }
+        });
+        createacct = findViewById(R.id.txtCreateAcct);
+        createacct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent createorgacct = new Intent(LoginActivity.this, CreateStaffAccountActivity.class);
+                startActivity(createorgacct);
+            }
+        });
 
         loginBtn = findViewById(R.id.loginButton);
         username = findViewById(R.id.edtUsername);
@@ -64,22 +84,16 @@ public class LoginActivity extends AppCompatActivity {
                             boolean isAdmin = loginResponse.getData().isAdmin();
 
                             if (isAdmin) {
-                                // User is not an admin, navigate to UserFragment
-                                // Pass userId as an argument to UserFragment
-                                Bundle bundle = new Bundle();
-                                bundle.putInt("user_id", userId);
+                                // User is an admin, navigate to OrganizationDetailsActivity
+                                Intent intent = new Intent(LoginActivity.this, OrganizationDetailsActivity.class);
+                                intent.putExtra("access_token", loginResponse.getData().getAccessToken());
 
-                                HomeFragment homeFragment = new HomeFragment();
-                                homeFragment.setArguments(bundle);
-
-                                getSupportFragmentManager()
-                                        .beginTransaction()
-                                        .replace(R.id.fragment_container, homeFragment)
-                                        .commit();
+                                startActivity(intent);
                             }else {
                                 // User is not an admin, navigate to another activity
-                                Intent intenttwo = new Intent(LoginActivity.this, HomeFragment.class);
+                                Intent intenttwo = new Intent(LoginActivity.this, EnterUserIdActivity.class);
                                 intenttwo.putExtra("id", loginResponse.getData().getId());
+                                intenttwo.putExtra("access_token", loginResponse.getData().getAccessToken());
                                 startActivity(intenttwo);
                             }
 
