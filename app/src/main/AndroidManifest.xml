@@ -15,22 +15,22 @@
         android:theme="@style/Theme.FreeLunch"
         tools:targetApi="31">
         <activity
-            android:name=".FetchProfileActivity"
+            android:name=".RedeemLunchActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminDashboardActivity"
+            android:name=".EnterNewPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".EnterMailActivity"
+            android:name=".ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".RedeemLunchSuccessful"
+            android:name=".EnterUserIdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".ListViewHistory"
-            android:exported="false" />
-        <activity
-            android:name=".otpDialogLayout"
             android:exported="false" />
         <activity
             android:name=".OTP"
@@ -51,7 +51,7 @@
             android:name=".ChooseAccoutActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RedemptionOptionsActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

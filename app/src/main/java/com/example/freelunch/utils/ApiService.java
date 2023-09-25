@@ -1,9 +1,8 @@
 package com.example.freelunch.utils;
 
-import com.example.freelunch.utils.LoginRequest;
-import com.example.freelunch.utils.LoginResponse;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -27,5 +26,24 @@ public interface ApiService {
             @Header("Authorization") String authorization,
             @Body CreateLunchSendRequest request
     );
+
+    // Define a GET request to fetch user data by userId
+    @GET("api/user/profile")
+    Call<UserDataResponse> getUserData(
+            @Header("Authorization") String authorizationHeader
+    );
+
+    @POST("api/user/forgot-password")
+    Call<Void> forgotPassword(@Body ForgotPasswordRequest request);
+
+    @POST("api/user/reset-password")
+    Call<Void> resetPassword(@Body ResetPasswordRequest request);
+
+    @POST("api/lunch/send")
+    Call<ApiResponse> sendLunchRequest(
+            @Header("Authorization") String authorization,
+            @Body LunchRequest lunchRequest
+    );
+
 
 }

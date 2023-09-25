@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/group"
+                android:id="@+id/profilePic"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/profilePic"
+                android:text="Hi,"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                android:textColor="#710193"
+                android:textStyle="bold"
+                android:id="@+id/txtHi"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txtHi"
+                android:text="user"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="25sp"
+                android:textColor="#710193"
+                android:textStyle="bold"
+                android:id="@+id/txtuser"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txtuser"
+                android:text="!"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="1dp"
+                android:textSize="30sp"
+                android:textColor="#710193"
+                android:textStyle="bold"
+                android:id="@+id/txtExclamationMark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Position"
+                android:textColor="#AD99B2"
+                android:layout_below="@id/txtHi"
+                android:layout_toRightOf="@id/profilePic"
+                android:layout_marginTop="10dp"
+                android:id="@+id/txtId"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="370dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/txtId"
+                android:layout_marginTop="20dp"
+                android:elevation="7dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="10dp"
+                android:background="@drawable/fram_43"
+                android:id="@+id/lunch_cardView"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/fram_43"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="You have"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:id="@+id/youhave"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="cursive"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_toRightOf="@+id/youhave"
+                        android:textColor="#FAFF00"
+                        android:textStyle="bold"
+                        android:id="@+id/txtLunchCount"
+                        android:textSize="30sp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="cursive"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="free lunches!"
+                        android:layout_below="@+id/youhave"
+                        android:textColor="#FAFF00"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        android:fontFamily="cursive"
+                        android:layout_marginLeft="20dp"/>
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_lunch_btns"
+                android:layout_below="@+id/lunch_cardView"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="15dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    android:text="Send Lunch"
+                    android:id="@+id/btn_redeem_lunch"
+                    app:backgroundTint="#7C149B"
+                    app:cornerRadius="10dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="140dp"
+                    android:layout_height="60dp"
+                    app:backgroundTint="#EABA00"
+                    app:cornerRadius="10dp"
+                    android:text="Redeen Lunch"
+                    android:id="@+id/btn_send_lunch"
+                    android:layout_gravity="start"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
